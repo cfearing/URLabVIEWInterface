@@ -25,7 +25,7 @@ Leveraging the dashboard server client interface, the UR LabVIEW Interface code 
 - The UR LabVIEW Interface heavily relies upon the Dashboard Server Client Interface. In order to use this client interface, the network settings for the robot must be configured and remote control must also be enabled
 - For more information on the Dashboard Server and other client interfaces, please refer to the UR Support Article [DASHBOARD SERVER E-SERIES, PORT 29999](https://www.universal-robots.com/articles/ur/dashboard-server-e-series-port-29999/)
 - Configure network settings and enable remote control
-![Configure Robot Network Settings](documentation/images/robot-network-settings.png)
+![Configure Robot Network Settings](Documentation/Images/robot-network-settings.png)
 - Ping the robot to ensure the destination is reachable from your host PC
 
 > If you are unable to establish a connection with your robot, check your Firewall settings. Firewall may need to be disabled to allow bi-directional communication with your PC
@@ -55,28 +55,28 @@ Fully development version of LabVIEW is required to open the LabVIEW project
 
 ## Using the UR LabVIEW Interface
 Press the Connect button to establish a network connection with the robot and load dashboard interfaces
-![Connect to Robot](documentation/images/connect-robot.png)
+![Connect to Robot](Documentation/Images/connect-robot.png)
 
 ### Overview of Interfaces
-![Dashboard Overview](documentation/images/dashboard-overview.png)
+![Dashboard Overview](Documentation/Images/dashboard-overview.png)
 
 #### Operation Interface
 Used to send high level robot operation commands. Buttons are dynamically enabled and disabled based on the current robot operational status
 
 > Please note, when changing from automatic to remote control mode, the robot TCP connection needs to be reset. A popup will appear prompting you to disconnect then reconnect the robot
 
-![Operation Interface](documentation/images/operation-interface.png)
+![Operation Interface](Documentation/Images/operation-interface.png)
 
 #### Command Interface
 Used to send custom dashboard server commands. A command list is loaded based on the polyscope version of the robot and the compatible commands for that version. Please note, some commands require the robot to be in remote control mode and the send button is disabled for those commands when the robot is in another mode
 
-![Command Interface](documentation/images/command-interface.png)
-![Command Interface Command List](documentation/images/command-interface-commands.png)
+![Command Interface](Documentation/Images/command-interface.png)
+![Command Interface Command List](Documentation/Images/command-interface-commands.png)
 
 #### Program Interface
 Used to play a single program or build a queue of programs to be played in sequence. Programs can either be loaded from a user defined list in the Settings file
 
-![Program List](documentation/images/settings-program-list.png)
+![Program List](Documentation/Images/settings-program-list.png)
 
 Or by enabling SFTP in the settings file and loading programs directly from the robot
 
@@ -86,12 +86,12 @@ User can play a single program by selecting a program in the program list and pr
 
 > Programs are executed in the Program Controller to ensure a program completes execution before the next program begins in the queue
 
-![Program Interface](documentation/images/program-interface.png)
+![Program Interface](Documentation/Images/program-interface.png)
 
 #### Program Controller
 The Program Controller is the cornerstone API used to load, play, and monitor status of a robot program. This VI monitors status of both the robot and program to ensure programs are executed to completion and no errors occur within the program or robot
 
-![Program Controller](documentation/images/settings-program-list.png)
+![Program Controller](Documentation/Images/settings-program-list.png)
 
 ##### Fault Recovery
 ==under development==
@@ -102,7 +102,7 @@ The socket interface can be used to stream data from the robot to PC over a sock
 - LabVIEW Interface must be running before the socket is opened on the robot
 - Data is collected upon program completion
 
-![Socket Interface](documentation/images/socket-interface.png)
+![Socket Interface](Documentation/Images/socket-interface.png)
 
 ## How to Get Help
 - The documentation for this project is actively under development. If you have questions about how to use the code, please use submit a question on the  [Question and Anwser Page](https://github.com/cfearing/URLabVIEWInterface/discussions/categories/q-a)
